@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="d1.css" />
+
+<script type="text/javascript" src="d1.js"></script>
+<title>Convoy's Game of Life</title>
+</head>
+<body onload="initializeGrid()">
+	<h1>Game of Life</h1>
+
+	<div class="content">
+		<div class="display_area" id="count_area">
+			<label class="_label" for="tableselect">Select Grid Size:</label>
+			<select id="tableselect" name="tableselect" tabindex="1" onChange="changTable(this)">
+				<option value="10" selected>10</option>
+				<option value="20">20</option>
+				<option value="30" >30</option>
+				<option value="40">40</option>
+				<option value="50">50</option>
+				<option value="60">60</option>
+			</select>
+		</div>
+		
+	<div class="main_grid" id="main_grid">
+	</div>
+
+	<div >
+		<h3 id="generation_h"></h3>
+			<h3 id="count_h"></h3>
+
+	</div>
+
+	<button class="action_button" onclick="start()" tabindex="6">Start</button>
+		<button class="action_button" onclick="stop()" tabindex="7">Stop</button>
+		<button class="action_button" onclick="step(1)" tabindex="2">Increment 1 Generation</button>
+		<button class="action_button" onclick="step(23)" tabindex="3">Increment 23 Generations</button>
+		<button class="action_button" onclick="reset()" tabindex="4">Reset</button>	
+		<button class="action_button" onclick="randomPopulation()" tabindex="5">Random Population</button>
+	</div>
+
+</body>
+</html>
